@@ -1,113 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LedgerLite - Personal Expense Tracker</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Project</title>
 </head>
+
 <body>
-    <div class="app-container">
-        <header>
-            <div class="logo">LedgerLite</div>
-            <nav>
-                <!-- Future Navigation -->
-            </nav>
-        </header>
-
-        <main>
-            <!-- Dashboard Summary -->
-            <section class="dashboard-summary">
-                <div class="card total-spent">
-                    <h3>Total This Month</h3>
-                    <div class="amount" id="total-amount">$0.00</div>
-                </div>
-                <div class="card transaction-count">
-                    <h3>Transactions</h3>
-                    <div class="count" id="transaction-count">0</div>
-                </div>
-            </section>
-
-            <!-- Main Content Grid -->
-            <div class="main-grid">
-                <!-- Add Expense Form -->
-                <section class="add-expense-section">
-                    <h2>Add Expense</h2>
-                    <form id="expense-form">
-                        <div class="form-group">
-                            <label for="amount">Amount</label>
-                            <input type="number" id="amount" placeholder="0.00" step="0.01" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="category">Category</label>
-                            <select id="category" required>
-                                <option value="" disabled selected>Select Category</option>
-                                <option value="Food">Food</option>
-                                <option value="Travel">Travel</option>
-                                <option value="Rent">Rent</option>
-                                <option value="Utilities">Utilities</option>
-                                <option value="Shopping">Shopping</option>
-                                <option value="Entertainment">Entertainment</option>
-                                <option value="Health">Health</option>
-                                <option value="Miscellaneous">Miscellaneous</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="date">Date</label>
-                            <input type="date" id="date" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="note">Note (Optional)</label>
-                            <input type="text" id="note" placeholder="What was this for?">
-                        </div>
-
-                        <button type="submit" class="btn-primary">Add Expense</button>
-                    </form>
-                </section>
-
-                <!-- Analytics -->
-                <section class="analytics-section">
-                    <h2>Spending Breakdown</h2>
-                    <div class="chart-container">
-                        <canvas id="expenseChart"></canvas>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Transaction History -->
-            <section class="history-section">
-                <h2>Recent Transactions</h2>
-                <div class="table-responsive">
-                    <table id="transaction-table">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Category</th>
-                                <th>Note</th>
-                                <th>Amount</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="transaction-list">
-                            <!-- Transactions will be injected here -->
-                        </tbody>
-                    </table>
-                </div>
-                <!-- Empty State -->
-                <div id="empty-state" class="hidden">
-                    <p>No transactions yet. Add one above!</p>
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <script src="script.js"></script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
+
 </html>
